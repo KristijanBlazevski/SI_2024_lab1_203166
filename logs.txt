@@ -1,0 +1,28 @@
+commit 224fdac1837a5ab11a4c23397fae853056c037ae (HEAD -> master, origin/master, bug2)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:34:04 2024 +0200
+
+     Fix wrong condition in makeBigStringFrom
+
+commit b3b12d9bcad977d64fcf0900eb376df671e25b55 (origin/bug1, bug1)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:36:15 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 17aa6692f63724e30ec1f11f8d0a5faf78201e50
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:32:48 2024 +0200
+
+    а Fix wrong condition in filterOddLengthStrings
+
+commit 52785a4673eefcde2f4626eb9322abfbe79dc410
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:24:46 2024 +0200
+
+    Add starter code
+
+
+DISCLAIMER: NEZNAM ZASTO PISUVA -> Author: Blazh <aleksandar.blazhevski@outlook.com> treba da stoi Author: KristijanBlazevski <kristijan.blazevski@yahoo.com>
+
+VEKJE 3 pati go pisuvam od pocetok ne se menja, neznam kako se povrzalo i neznam kako da go smenam, se nadevam deka nema da pretstavuva problem 
