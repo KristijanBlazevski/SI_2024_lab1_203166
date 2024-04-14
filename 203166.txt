@@ -1,0 +1,787 @@
+Kristijan@DESKTOP-AH9R819 MINGW64 ~
+$ mkdir SI_2024_lab1_203166
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~
+$ cd SI_2024_lab1_203166
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166
+$ git init
+Initialized empty Git repository in C:/Users/Kristijan/SI_2024_lab1_203166/.git/
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git remote add origin https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ touch README.md
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git add README.md
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 8a498f1] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git add SILab1_2.java SILab1_1.java SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SILab1Main.java
+        new file:   SILab1_1.java
+        new file:   SILab1_2.java
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git commit -m "Add starter code"
+[master 52785a4] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git branch
+* master
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git remote
+origin
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git remote
+origin
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git branch
+* master
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.15 KiB | 1.15 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git branch -b bug1
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --[no-]verbose    show hash and subject, give twice for upstream branch
+    -q, --[no-]quiet      suppress informational messages
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --[no-]set-upstream-to <upstream>
+                          change the upstream info
+    --[no-]unset-upstream unset the upstream info
+    --[no-]color[=<when>] use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --[no-]abbrev[=<n>]   use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --[no-]delete     delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --[no-]move       move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    --[no-]omit-empty     do not output a newline after empty formatted refs
+    -c, --[no-]copy       copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --[no-]list       list branch names
+    --[no-]show-current   show current branch name
+    --[no-]create-reflog  create the branch's reflog
+    --[no-]edit-description
+                          edit the description for the branch
+    -f, --[no-]force      force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --[no-]column[=<style>]
+                          list branches in columns
+    --[no-]sort <key>     field name to sort on
+    --[no-]points-at <object>
+                          print only branches of the object
+    -i, --[no-]ignore-case
+                          sorting and filtering are case insensitive
+    --[no-]recurse-submodules
+                          recurse through submodules
+    --[no-]format <format>
+                          format to use for the output
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git branch bug1
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git branch bug2
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git status
+On branch bug1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1_1.java
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git commit -m "а Fix wrong condition in filterOddLengthStrings"
+[bug1 17aa669] а Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git status
+On branch bug2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1_2.java
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git commit -m " Fix wrong condition in makeBigStringFrom"
+[bug2 4d36f0d]  Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git status
+On branch bug1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1Main.java
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 b3b12d9] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git add SILab1Main.java
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 c3cff3b] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git push origin bug1
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 748 bytes | 748.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/KristijanBlazevski/SI_2024_lab1_203166/pull/new/bug1
+remote:
+To https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+ * [new branch]      bug1 -> bug1
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git push origin bug2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 687 bytes | 687.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/KristijanBlazevski/SI_2024_lab1_203166/pull/new/bug2
+remote:
+To https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+ * [new branch]      bug2 -> bug2
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git push origin master
+Everything up-to-date
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git merge bug1
+Updating 52785a4..b3b12d9
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+   52785a4..b3b12d9  master -> master
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push origin bug1
+Everything up-to-date
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push origin master
+Everything up-to-date
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply c3cff3b... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply c3cff3b... Call method makeBigStringFrom in main class
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2|REBASE 2/2)
+$ git rebase master
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2|REBASE 2/2)
+$ git rebase master --continue
+usage: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]
+   or: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] --root [<branch>]
+   or: git rebase --continue | --abort | --skip | --edit-todo
+
+    --[no-]onto <revision>
+                          rebase onto given branch instead of upstream
+    --[no-]keep-base      use the merge-base of upstream and branch as the current base
+    --no-verify           allow pre-rebase hook to run
+    --verify              opposite of --no-verify
+    -q, --[no-]quiet      be quiet. implies --no-stat
+    -v, --[no-]verbose    display a diffstat of what changed upstream
+    -n, --no-stat         do not show diffstat of what changed upstream
+    --stat                opposite of --no-stat
+    --[no-]signoff        add a Signed-off-by trailer to each commit
+    --[no-]committer-date-is-author-date
+                          make committer date match author date
+    --[no-]reset-author-date
+                          ignore author date and use current date
+    -C <n>                passed to 'git apply'
+    --[no-]ignore-whitespace
+                          ignore changes in whitespace
+    --[no-]whitespace <action>
+                          passed to 'git apply'
+    -f, --[no-]force-rebase
+                          cherry-pick all commits, even if unchanged
+    --no-ff               cherry-pick all commits, even if unchanged
+    --ff                  opposite of --no-ff
+    --continue            continue
+    --skip                skip current patch and continue
+    --abort               abort and check out the original branch
+    --quit                abort but keep HEAD where it is
+    --edit-todo           edit the todo list during an interactive rebase
+    --show-current-patch  show the patch file being applied or merged
+    --apply               use apply strategies to rebase
+    -m, --merge           use merging strategies to rebase
+    -i, --interactive     let the user edit the list of commits to rebase
+    --[no-]rerere-autoupdate
+                          update the index with reused conflict resolution if possible
+    --empty (drop|keep|ask)
+                          how to handle commits that become empty
+    --[no-]autosquash     move commits that begin with squash!/fixup! under -i
+    --[no-]update-refs    update branches that point to commits that are being rebased
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG-sign commits
+    --[no-]autostash      automatically stash/stash pop before and after
+    -x, --[no-]exec <exec>
+                          add exec lines after each commit of the editable list
+    -r, --[no-]rebase-merges[=<mode>]
+                          try to rebase merges instead of skipping them
+    --[no-]fork-point     use 'merge-base --fork-point' to refine upstream
+    -s, --[no-]strategy <strategy>
+                          use the given merge strategy
+    -X, --[no-]strategy-option <option>
+                          pass the argument through to the merge strategy
+    --[no-]root           rebase all reachable commits up to the root(s)
+    --[no-]reschedule-failed-exec
+                          automatically re-schedule any `exec` that fails
+    --[no-]reapply-cherry-picks
+                          apply all changes, even those already present upstream
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2|REBASE 2/2)
+$ git rebase --continue
+SILab1Main.java: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2|REBASE 2/2)
+$ git status
+interactive rebase in progress; onto b3b12d9
+Last commands done (2 commands done):
+   pick 4d36f0d Fix wrong condition in makeBigStringFrom
+   pick c3cff3b Call method makeBigStringFrom in main class
+No commands remaining.
+You are currently rebasing branch 'bug2' on 'b3b12d9'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2|REBASE 2/2)
+$ git rebase --continue
+SILab1Main.java: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2|REBASE 2/2)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/bug2.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git log
+commit 224fdac1837a5ab11a4c23397fae853056c037ae (HEAD -> bug2)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:34:04 2024 +0200
+
+     Fix wrong condition in makeBigStringFrom
+
+commit b3b12d9bcad977d64fcf0900eb376df671e25b55 (origin/master, origin/bug1, master, bug1)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:36:15 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 17aa6692f63724e30ec1f11f8d0a5faf78201e50
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:32:48 2024 +0200
+
+    а Fix wrong condition in filterOddLengthStrings
+
+commit 52785a4673eefcde2f4626eb9322abfbe79dc410
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:24:46 2024 +0200
+
+    Add starter code
+
+commit 8a498f16e87da07264253d80769693cf51d0ab38
+:
+Date:   Sun Apr 14 21:34:04 2024 +0200
+
+     Fix wrong condition in makeBigStringFrom
+
+commit b3b12d9bcad977d64fcf0900eb376df671e25b55 (origin/master, origin/bug1, master, bug1)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:36:15 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 17aa6692f63724e30ec1f11f8d0a5faf78201e50
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:32:48 2024 +0200
+
+    а Fix wrong condition in filterOddLengthStrings
+
+commit 52785a4673eefcde2f4626eb9322abfbe79dc410
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:24:46 2024 +0200
+
+    Add starter code
+
+commit 8a498f16e87da07264253d80769693cf51d0ab38
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:20:56 2024 +0200
+
+    Initial commit
+(END)
+commit b3b12d9bcad977d64fcf0900eb376df671e25b55 (origin/master, origin/bug1, master, bug1)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:36:15 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 17aa6692f63724e30ec1f11f8d0a5faf78201e50
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:32:48 2024 +0200
+
+    а Fix wrong condition in filterOddLengthStrings
+
+commit 52785a4673eefcde2f4626eb9322abfbe79dc410
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:24:46 2024 +0200
+
+    Add starter code
+
+commit 8a498f16e87da07264253d80769693cf51d0ab38
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:20:56 2024 +0200
+
+    Initial commit
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git merge bug2
+Updating b3b12d9..224fdac
+Fast-forward
+ SILab1_2.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+   b3b12d9..224fdac  master -> master
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git log -oneline
+fatal: unrecognized argument: -oneline
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git log
+commit 224fdac1837a5ab11a4c23397fae853056c037ae (HEAD -> master, origin/master, bug2)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:34:04 2024 +0200
+
+     Fix wrong condition in makeBigStringFrom
+
+commit b3b12d9bcad977d64fcf0900eb376df671e25b55 (origin/bug1, bug1)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:36:15 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 17aa6692f63724e30ec1f11f8d0a5faf78201e50
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:32:48 2024 +0200
+
+    а Fix wrong condition in filterOddLengthStrings
+
+commit 52785a4673eefcde2f4626eb9322abfbe79dc410
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:24:46 2024 +0200
+
+    Add starter code
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git log
+commit 224fdac1837a5ab11a4c23397fae853056c037ae (HEAD -> master, origin/master, bug2)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:34:04 2024 +0200
+
+     Fix wrong condition in makeBigStringFrom
+
+commit b3b12d9bcad977d64fcf0900eb376df671e25b55 (origin/bug1, bug1)
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:36:15 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 17aa6692f63724e30ec1f11f8d0a5faf78201e50
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:32:48 2024 +0200
+
+    а Fix wrong condition in filterOddLengthStrings
+
+commit 52785a4673eefcde2f4626eb9322abfbe79dc410
+Author: Blazh <aleksandar.blazhevski@outlook.com>
+Date:   Sun Apr 14 21:24:46 2024 +0200
+
+    Add starter code
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        203166.txt
+        logs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git add 203166.txt
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git add logs.txt
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   203166.txt
+        new file:   logs.txt
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git commit -m "Final commit"
+[master 0108b4d] Final commit
+ 2 files changed, 28 insertions(+)
+ create mode 100644 203166.txt
+ create mode 100644 logs.txt
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git rebase
+Current branch master is up to date.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git ^C
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ ^C
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ ^C
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ ^C
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push origin logs.txt
+error: src refspec logs.txt does not match any
+error: failed to push some refs to 'https://github.com/KristijanBlazevski/SI_2024_lab1_203166'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push origin bug1
+Everything up-to-date
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git push origin bug2
+To https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/KristijanBlazevski/SI_2024_lab1_203166'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git pull origin bug2
+From https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+ * branch            bug2       -> FETCH_HEAD
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 847 bytes | 847.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KristijanBlazevski/SI_2024_lab1_203166
+   224fdac..0108b4d  master -> master
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git add 203166.txt
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git push
+Everything up-to-date
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        modified:   203166.txt
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1Main.java
+
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git add logs.txt
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git push 203166.txt
+fatal: invalid gitfile format: 203166.txt
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git push
+Everything up-to-date
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git merge --continue
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       SILab1Main.java
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master|MERGING)
+$ git merge --abort
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Kristijan@DESKTOP-AH9R819 MINGW64 ~/SI_2024_lab1_203166 (master)
+$
