@@ -1,3 +1,5 @@
+DO 29 CEKOR RESENA
+
 (NA 20 cekor nema konflikt 23 cekor ima konflikt koj go resivme so brisenje na delot od master a go ostavivme delot koj go dodavme vo bug2 odnosno 
 System.out.println(SILab1_2.makeBigStringFrom(list)); 25 cekor NEMA KONFLIKT)
 
